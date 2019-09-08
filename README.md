@@ -16,9 +16,9 @@ Things you may want to cover:
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|name|string|null: false, unipue: true|
 |password|string|null: false|
-|email|string|null: false|
+|email|string|null: false, unique: true|
 ### Association
 - has_many :groups
 - has_many :messages
@@ -26,7 +26,7 @@ Things you may want to cover:
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|name|string|null: false, unique: true|
 |message_id|integer|null: false, foreign_key: true|
 ### Association
 - has_many :users
