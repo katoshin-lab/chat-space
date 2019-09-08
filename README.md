@@ -12,15 +12,15 @@ Things you may want to cover:
 * Configuration
 
 * Database creation
-#Chat-space DB設計
+# Chat-space DB設計
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false|
 |email|string|null: false|
 ### Association
-has_many :groups
-has_many :messages
+- has_many :groups
+- has_many :messages
 
 ## groups_usersテーブル
 |Column|Type|Options|
