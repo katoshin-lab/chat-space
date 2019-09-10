@@ -13,7 +13,7 @@ Things you may want to cover:
 
 * Database creation
 # Chat-Space DB設計
-## usersテーブル
+## usersテーブル(インデックスを貼る)
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, unipue: true|
