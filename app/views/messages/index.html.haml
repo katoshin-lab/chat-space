@@ -5,6 +5,11 @@
   %body
 
     .wrapper
-      .groupList 
-        %i.fa.fa-cog
-        
+      .side-menu
+        .side-menu__header
+          %p テストユーザー
+          %i.fa.fa-cog
+          %i.fas.fa-edit
+        .side-menu__groups
+          = render "group"
+          = render "group"
