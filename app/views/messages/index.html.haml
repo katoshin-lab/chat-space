@@ -7,9 +7,13 @@
     .wrapper
       .side-menu
         .side-menu__header
-          %p テストユーザー
-          %i.fa.fa-cog
-          %i.fas.fa-edit
+          .user
+            %p.user__name テストユーザー
+          .icon
+            .icon__gear
+              %i.fa.fa-cog
+            .icon__edit
+              %i.fas.fa-edit
         .side-menu__groups
           = render "group"
           = render "group"
