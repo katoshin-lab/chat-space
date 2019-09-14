@@ -1,17 +1,10 @@
-.side-menu {
-  background-color: #2f3e51;
+$sideMenuColor: #2f3e51;
+$sideMenuHeaderColor: #253141;
+$mainBlueColor: #38aef0;
+$mainTextColor: #ffffff;
+$headerGroupNameColor: #333333;
+$headerMemberColor: #999999;
+$chat-room: #fafafa;
 
-  &__header { 
-    background-color: #253141;
-    &__icon {
-
-      &__gear {
-        color: #ffffff;
-      }
-
-      &__edit {
-        color: #ffffff;
-      }
-    }
-  }
-}
+$padding-side: 0 20px;
+$padding-chat: 0 40px;

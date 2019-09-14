@@ -1,0 +1,48 @@
+@import "./variable";
+
+.wrapper {
+  display: flex;
+  .chat-room {
+    width: calc(100vw - 300px);
+    &__header {
+      height: 100px;
+      padding: $padding-chat;
+      border-bottom: 1px solid #eeeeee;
+
+      &__group {
+        display: inline-block;
+        padding-top: 35px;
+
+        &__name {
+          font-size: 20px;
+          color: $headerGroupNameColor;
+          padding-bottom: 15px;
+        }
+
+        &__member {
+          font-size: 12px;
+          color: $headerMemberColor;
+        }
+      }
+      &__edit {
+        height: 40px;
+        padding: 0 20px;
+        margin-top: 28px;
+        float: right;
+        border: 1px solid $mainBlueColor;
+        color: $mainBlueColor;
+        font-style: normal;
+        text-decoration: none;
+        line-height: 38px;
+      }
+    }
+
+    &__main {
+
+    }
+
+    &__post {
+
+    }
+  }
+}
