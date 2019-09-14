@@ -1,0 +1,35 @@
+.wrapper
+
+  .side-menu
+    .side-menu__header
+      .side-menu__header__user
+        %p.side-menu__header__user__name テストユーザー
+      .side-menu__header__icon
+        = link_to "", class: "side-menu__header__icon__edit" do
+          %i.fa.fa-edit
+        = link_to "", class: "side-menu__header__icon__gear" do
+          %i.fa.fa-cog
+    .side-menu__groups
+      = render "group" 
+      = render "group"
+
+  .chat-room
+    .chat-room__header
+      .chat-room__header__group
+        .chat-room__header__group__name グループサンプル
+        .chat-room__header__group__member member: テストユーザー
+      = link_to "", class: "chat-room__header__edit" do
+        %div Edit
+    .chat-room__main
+      .chat-room__main__box
+        = render "message"
+        = render "message"
+    .chat-room__post
+      %form.chat-room__post__box
+        %input.chat-room__post__box__input{type: "text", placeholder: "type a message"}
+          %label.chat-room__post__box__input__pic
+            %span{title: "upload picture"}
+              %i.far.fa-image.fa-2x
+              %input.chat-room__post__box__input__pic__display{type: "file", alt: ""}
+        = link_to "", class: "chat-room__post__box__send" do
+          %div Send
