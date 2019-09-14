@@ -1,3 +1,17 @@
 .side-menu {
-  background-color: #253141;
+  background-color: #2f3e51;
+
+  &__header { 
+    background-color: #253141;
+    &__icon {
+
+      &__gear {
+        color: #ffffff;
+      }
+
+      &__edit {
+        color: #ffffff;
+      }
+    }
+  }
 }

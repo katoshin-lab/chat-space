@@ -7,13 +7,13 @@
     .wrapper
       .side-menu
         .side-menu__header
-          .user
-            %p.user__name テストユーザー
-          .icon
-            .icon__gear
+          .side-menu__header__user
+            %p.side-menu__header__user__name テストユーザー
+          .side-menu__header__icon
+            = link_to "", class: "side-menu__header__icon__edit" do
+              %i.fa.fa-edit
+            = link_to "", class: "side-menu__header__icon__gear" do
               %i.fa.fa-cog
-            .icon__edit
-              %i.fas.fa-edit
         .side-menu__groups
-          = render "group"
+          = render "group" 
           = render "group"
