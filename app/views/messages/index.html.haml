@@ -31,3 +31,11 @@
             = render "message"
             = render "message"
         .chat-room__post
+          %form.chat-room__post__box
+            %input.chat-room__post__box__input{type: "text", placeholder: "type a message"}
+              %label.chat-room__post__box__input__pic
+                %span{title: "upload picture"}
+                  %i.far.fa-image.fa-2x
+                  %input.chat-room__post__box__input__pic__display{type: "file", alt: ""}
+            = link_to "", class: "chat-room__post__box__send" do
+              %div Send

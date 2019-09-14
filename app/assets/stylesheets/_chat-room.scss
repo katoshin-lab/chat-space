@@ -10,7 +10,7 @@
       height: 100px;
       width: $width-chat;
       padding: $padding-chat;
-      border-bottom: 1px solid #eeeeee;
+      border-bottom: 1px solid $headerBorderColor;
 
       &__group {
         display: inline-block;
@@ -81,11 +81,48 @@
     &__post {
       height: 90px;
       width: $width-chat;
-      background-color: gray;
+      background-color: $subTextColor;
       position: absolute;
       bottom: 0;
       padding: $padding-chat;
-    
+
+      &__box {
+        height: 90px;
+        padding: $padding-main;
+        position: relative;
+        display: flex;
+
+        &__input {
+          width: calc(100% - 100px);
+          height: 50px;
+
+          &__pic {
+            position: absolute;
+            top: 29px;
+            right: 110px;
+
+            &__display {
+              display: none;
+            }
+          }
+        }
+        &__input::placeholder {
+          padding-left: 10px;
+        }
+        
+        &__send {
+          width: 85px;
+          line-height: 50px;
+          margin-left: 15px;
+          text-align: center;
+          position: absolute;
+          right: 0;
+          text-decoration: none;
+          color: $mainTextColor;
+          background-color: $mainBlueColor;
+        }
+
+      }
     }
   }
 }
