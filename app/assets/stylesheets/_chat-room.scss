@@ -2,10 +2,13 @@
 
 .wrapper {
   display: flex;
+  position: relative;
+  height: 100vh;
   .chat-room {
     width: calc(100vw - 300px);
     &__header {
       height: 100px;
+      width: $width-chat;
       padding: $padding-chat;
       border-bottom: 1px solid #eeeeee;
 
@@ -38,11 +41,20 @@
     }
 
     &__main {
+      height: calc(100vh - 190px);
+      width: $width-chat;
+      background-color: $mainSpaceColor;
 
     }
 
     &__post {
-
+      height: 90px;
+      width: $width-chat;
+      background-color: gray;
+      position: absolute;
+      bottom: 0;
+      padding: $padding-chat;
+    
     }
   }
 }
