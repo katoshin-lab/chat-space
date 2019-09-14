@@ -40,11 +40,11 @@
     }
 
     &__groups {
-      padding: $padding-side;;
+      padding: $padding-side;
     
 
       &__group {
-        padding: 20px 0;
+        padding: $padding-main;
 
         &__name{
           padding-bottom: 5px;

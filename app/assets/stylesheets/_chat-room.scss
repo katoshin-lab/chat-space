@@ -24,7 +24,7 @@
 
         &__member {
           font-size: 12px;
-          color: $headerMemberColor;
+          color: $subTextColor;
         }
       }
       &__edit {
@@ -44,6 +44,37 @@
       height: calc(100vh - 190px);
       width: $width-chat;
       background-color: $mainSpaceColor;
+      padding: $padding-chat;
+
+      &__box {
+        padding-top: 26px;
+
+        &__message {
+          padding: $padding-main;
+
+          &__info {
+            display: flex;
+            padding-bottom: 10px;
+
+            &__name {
+              font-size: 16px;
+              font-weight: bold;
+              color: $messageColor;
+              padding-right: 10px;
+            }
+
+            &__date {
+              font-size: 12px;
+              color: $subTextColor;
+            }
+          }
+
+          &__text {
+            font-size: 14px;
+            color: $messageColor;
+          }
+        }
+      }
 
     }
 
