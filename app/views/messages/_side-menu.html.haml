@@ -3,7 +3,7 @@
     %h3.side-menu__header__user__name
       = current_user.name
   .side-menu__header__icon
-    = link_to "", class: "side-menu__header__icon__edit" do
+    = link_to "/groups/new", class: "side-menu__header__icon__edit" do
       %i.fa.fa-edit
     = link_to edit_user_path(current_user), class: "side-menu__header__icon__gear" do
       %i.fa.fa-cog
