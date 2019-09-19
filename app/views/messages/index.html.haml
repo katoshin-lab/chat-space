@@ -1,8 +1,4 @@
 .wrapper
-
-  .side-menu
-    = render "side-menu"
-
   .chat-room
     .chat-room__header
       .chat-room__header__group
@@ -12,8 +8,8 @@
         %div Edit
     .chat-room__main
       .chat-room__main__box
-        = render "message"
-        = render "message"
+        = render "shared/message"
+        = render "shared/message"
     .chat-room__post
       %form.chat-room__post__box
         %input.chat-room__post__box__input{type: "text", placeholder: "type a message"}

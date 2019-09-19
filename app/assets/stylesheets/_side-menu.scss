@@ -42,10 +42,14 @@
     &__groups {
       padding: $padding-side;
       height: calc(100vh - 100px);
-    
+
+      &--link {
+        text-decoration: none;
+      }
 
       &__group {
         padding: $padding-main;
+        color: $mainTextColor;
 
         &__name{
           padding-bottom: 5px;
