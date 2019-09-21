@@ -100,6 +100,7 @@
         &__input {
           width: calc(100% - 100px);
           height: 50px;
+          border: none;
 
           &__pic {
             position: absolute;
@@ -125,6 +126,7 @@
           text-decoration: none;
           color: $mainTextColor;
           background-color: $mainBlueColor;
+          border: none;
         }
 
       }
