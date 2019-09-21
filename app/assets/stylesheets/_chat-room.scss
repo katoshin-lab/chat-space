@@ -72,6 +72,10 @@
           &__text {
             font-size: 14px;
             color: $messageColor;
+            &__letter {
+            }
+            &__image {
+            }
           }
         }
       }
@@ -86,7 +90,8 @@
       bottom: 0;
       padding: $padding-chat;
 
-      &__box {
+      &__box 
+      {
         height: 90px;
         padding: $padding-main;
         position: relative;
