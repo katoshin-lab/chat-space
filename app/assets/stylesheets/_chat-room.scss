@@ -6,6 +6,7 @@
   height: 100vh;
   .chat-room {
     width: calc(100vw - 300px);
+    
     &__header {
       height: 100px;
       width: $width-chat;
@@ -45,12 +46,14 @@
       width: $width-chat;
       background-color: $mainSpaceColor;
       padding: $padding-chat;
+      overflow: scroll;
 
       &__box {
         padding-top: 26px;
 
         &__message {
           padding: $padding-main;
+          background-color: $mainSpaceColor;
 
           &__info {
             display: flex;
