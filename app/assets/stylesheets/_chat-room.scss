@@ -6,6 +6,7 @@
   height: 100vh;
   .chat-room {
     width: calc(100vw - 300px);
+    
     &__header {
       height: 100px;
       width: $width-chat;
@@ -45,12 +46,14 @@
       width: $width-chat;
       background-color: $mainSpaceColor;
       padding: $padding-chat;
+      overflow: scroll;
 
       &__box {
         padding-top: 26px;
 
         &__message {
           padding: $padding-main;
+          background-color: $mainSpaceColor;
 
           &__info {
             display: flex;
@@ -72,6 +75,10 @@
           &__text {
             font-size: 14px;
             color: $messageColor;
+            &__letter {
+            }
+            &__image {
+            }
           }
         }
       }
@@ -86,7 +93,8 @@
       bottom: 0;
       padding: $padding-chat;
 
-      &__box {
+      &__box 
+      {
         height: 90px;
         padding: $padding-main;
         position: relative;
@@ -95,6 +103,7 @@
         &__input {
           width: calc(100% - 100px);
           height: 50px;
+          border: none;
 
           &__pic {
             position: absolute;
@@ -120,6 +129,7 @@
           text-decoration: none;
           color: $mainTextColor;
           background-color: $mainBlueColor;
+          border: none;
         }
 
       }

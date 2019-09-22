@@ -10,9 +10,9 @@
         %i.fa.fa-cog
   .side-menu__groups
     - current_user.groups.each do |group|
-      = link_to "#", class: "side-menu__groups--link" do
+      = link_to group_messages_path(group), class: "side-menu__groups--link" do
         .side-menu__groups__group
           .side-menu__groups__group__name
             = group.name
           .side-menu__groups__group__latest-message
-            メッセージはまだありません。
+            = group.show_last_message

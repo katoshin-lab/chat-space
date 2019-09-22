@@ -42,6 +42,7 @@
     &__groups {
       padding: $padding-side;
       height: calc(100vh - 100px);
+      overflow: scroll;
 
       &--link {
         text-decoration: none;

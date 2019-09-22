@@ -1,21 +1,26 @@
 .wrapper
+  = render "shared/side-menu"
   .chat-room
     .chat-room__header
       .chat-room__header__group
-        .chat-room__header__group__name グループサンプル
-        .chat-room__header__group__member member: テストユーザー
-      = link_to "", class: "chat-room__header__edit" do
+        .chat-room__header__group__name 
+          = @group.name
+        .chat-room__header__group__member
+          - @users.each_with_index do |user, i|
+            - if i == 0
+              = "member: #{user.name}"
+            -else
+              = ", #{user.name}"
+      = link_to edit_group_path(@group), class: "chat-room__header__edit" do
         %div Edit
     .chat-room__main
       .chat-room__main__box
-        = render "shared/message"
-        = render "shared/message"
+        = render partial: 'message', collection: @messages
     .chat-room__post
-      %form.chat-room__post__box
-        %input.chat-room__post__box__input{type: "text", placeholder: "type a message"}
-          %label.chat-room__post__box__input__pic
-            %span{title: "upload picture"}
-              %i.far.fa-image.fa-2x
-              %input.chat-room__post__box__input__pic__display{type: "file", alt: ""}
-        = link_to "", class: "chat-room__post__box__send" do
-          %div Send
+      = form_for [@group, @message], :html => {:class => "chat-room__post__box"} do |f|
+        = f.text_field :content, class: "chat-room__post__box__input", placeholder: "type a message"
+        %div
+          = f.label :image, class: "chat-room__post__box__input__pic" do
+            %i.far.fa-image.fa-2x
+            = f.file_field :image, class: "chat-room__post__box__input__pic__display"
+        = f.submit "Send", class: "chat-room__post__box__send"
