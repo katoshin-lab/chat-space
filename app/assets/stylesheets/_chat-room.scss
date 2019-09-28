@@ -4,6 +4,7 @@
   display: flex;
   position: relative;
   height: 100vh;
+  
   .chat-room {
     width: calc(100vw - 300px);
     
@@ -132,7 +133,6 @@
           background-color: $mainBlueColor;
           border: none;
         }
-
       }
     }
   }
