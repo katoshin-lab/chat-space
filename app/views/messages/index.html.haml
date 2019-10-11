@@ -14,7 +14,7 @@
       = link_to edit_group_path(@group), class: "chat-room__header__edit" do
         %div Edit
     .chat-room__main
-      .chat-room__main__box
+      %div.chat-room__main__box
         = render partial: 'message', collection: @messages
     .chat-room__post
       = form_for [@group, @message], :html => {:class => "chat-room__post__box"} do |f|
