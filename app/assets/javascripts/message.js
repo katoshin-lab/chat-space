@@ -42,16 +42,16 @@ $(function() {
     .done(function(data) {
       var html = buildHTML(data);
       $(".chat-room__main__box").append(html);
-      $(".chat-room__post__box__input").val("");
     })
     .fail(function(){
       alert('error');
     })
     .always(function() {
+      $("#new_message")[0].reset();
       $(".chat-room__post__box__send").removeAttr("disabled");
       $('.chat-room__main').animate({scrollTop: $('.chat-room__main')[0].scrollHeight}, 'fast');
       setTimeout(function(){
-        $('.gr__localhost').animate({scrollTop: $('.gr__localhost')[0].scrollHeight}, 'slow');
+        $('.wrapper').animate({scrollTop: $('.wrapper')[0].scrollHeight}, 'slow');
       },3000);
     })
   })
