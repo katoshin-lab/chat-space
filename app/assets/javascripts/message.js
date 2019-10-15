@@ -1,6 +1,17 @@
 $(function() {
 
   function buildHTML(message) {
+  var messageContent = message.content === '' ? ''
+                                              : `<p class="chat-room__main__box__message__text__letter">
+                                                  ${message.content}
+                                                 </p>`
+
+  var messageImage = message.image === null ? `</div>
+                                               </div>` : `<img class="chat-room__main__box__message__text__image" src="${message.image}">
+                                                          </div>
+                                                          </div>`
+                                          
+                                          
   var html = `<div class="chat-room__main__box__message">
                 <div class="chat-room__main__box__message__info">
                   <div class="chat-room__main__box__message__info__name">
@@ -10,19 +21,10 @@ $(function() {
                     ${message.date}
                   </div>
                 </div>
-                <div class="chat-room__main__box__message__text">`
-              
-    if (message.content!="") {
-      html+= `<p class="chat-room__main__box__message__text__letter">
-                ${message.content}
-              </p>`
-    }
-    if (message.image!=null) {
-      html+= `<img class="chat-room__main__box__message__text__image" src="${message.image}">`
-    }
-    html+= `</div>
-          </div>`              
-                  
+                <div class="chat-room__main__box__message__text">
+                  ${messageContent}
+                  ${messageImage}`
+
     return html;
   }
   $("#new_message").on('submit', function(e) {
