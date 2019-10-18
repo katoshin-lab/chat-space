@@ -11,7 +11,7 @@
               = "member: #{user.name}"
             -else
               = ", #{user.name}"
-      = link_to edit_group_path(@group), class: "chat-room__header__edit" do
+      = link_to edit_group_path(@group), class: "chat-room__header__edit", data: { turbolinks: false } do
         %div Edit
     .chat-room__main
       %div.chat-room__main__box

@@ -3,9 +3,18 @@ $(function() {
   function buildHTML(user) {
     var html = `<div class="chat-group-user clearfix">
                   <p class="chat-group-user__name">${user.name}</p>
-                  <div class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${user.id}" data-user-name="${user.name}">追加</div>
+                  <a class="user-search-add chat-group-user__btn chat-group-user__btn--add" data-user-id="${user.id}" data-user-name="${user.name}">追加</a>
                 </div>`
     $("#user-search-result").append(html);
+  }
+
+  function addUser(userId, userName) {
+    var html = `<div class='chat-group-user'>
+                  <input name='group[user_ids][]' type='hidden' value='${userId}'>
+                  <p class='chat-group-user__name'>${userName}</p>
+                  <a class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</a>
+                </div>`
+    return html;
   }
 
   function noUser(msg) {
@@ -44,4 +53,16 @@ $(function() {
       alert('検索できませんでした。');
     })
   })
+
+  $(document).on('click', ".user-search-add", function(){
+    var selectedId = $(this).attr('data-user-id');
+    var selectedName =  $(this).attr('data-user-name');
+    var addUserHtml = addUser(selectedId, selectedName);
+    $(this).parent().remove();
+    $("#add-user").append(addUserHtml);
+  });
+
+  $(document).on('click', '.user-search-remove', function(){
+    $(this).parent().remove();
+  });
 })
