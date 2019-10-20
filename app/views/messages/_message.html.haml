@@ -1,4 +1,4 @@
-.chat-room__main__box__message{data: {id: message.id}}
+.chat-room__main__box__message{"data-message-id": "#{message.id}"}
   .chat-room__main__box__message__info
     .chat-room__main__box__message__info__name 
       = message.user.name
@@ -8,4 +8,4 @@
     - if message.content.present?
       %p.chat-room__main__box__message__text__letter
         = message.content
-    = image_tag message.image.url, class: 'chat-room__main__box__message__text__image' if message.image.present?
+    = image_tag message.image.url, class: 'chat-room__main__box__message__text__image' if message.image.url.present?
