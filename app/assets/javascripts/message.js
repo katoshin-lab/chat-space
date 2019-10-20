@@ -72,7 +72,7 @@ $(function() {
         $('.chat-room__main').animate({scrollTop: $('.chat-room__main')[0].scrollHeight}, 'fast');
       })
       .fail(function() {
-        console.log('error');
+        alert('error');
       });
     }
   };
