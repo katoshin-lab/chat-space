@@ -18,6 +18,8 @@ module ChatSpace
       config.autoload_paths += Dir[Rails.root.join('app', 'uploaders')]
       config.i18n.default_locale = :ja
       config.action_view.field_error_proc = proc { |html_tag, instance| html_tag }
+      config.time_zone
+      config.active_record.default_timezone = :local
     end
   end
 end
