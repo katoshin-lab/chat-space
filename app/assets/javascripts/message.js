@@ -42,9 +42,6 @@ $(function() {
       var html = buildHTML(data);
       $(".chat-room__main__box").append(html);
       $('.chat-room__main').animate({scrollTop: $('.chat-room__main')[0].scrollHeight}, 'fast');
-      setTimeout(function(){
-        $('.wrapper').animate({scrollTop: $('.wrapper')[0].scrollHeight}, 'slow');
-      },3000);
     })
     .fail(function(){
       alert('error');
