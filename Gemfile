@@ -68,6 +68,7 @@ gem 'font-awesome-sass', '~> 5.2.0'
 gem 'devise'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'fog-aws'
 
 group :production do
   gem 'unicorn', '5.4.1'
