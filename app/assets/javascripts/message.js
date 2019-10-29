@@ -67,7 +67,7 @@ $(function() {
           $(".chat-room__main__box").append(insertHTML);
         })
         if (last_message_id != $(".chat-room__main__box__message").last().attr('data-message-id')) {
-          $('.chat-room__main').animate({scrollTop: $('.chat-room__main')[0].scrollHeight}, 'fast');
+          $('.chat-room__main').animate({scrollTop: $('.chat-room__main')[0].scrollHeight}, 'normal');
         }
       })
       .fail(function() {
