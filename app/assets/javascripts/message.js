@@ -66,7 +66,9 @@ $(function() {
           insertHTML = buildHTML(message);
           $(".chat-room__main__box").append(insertHTML);
         })
-        $('.chat-room__main').animate({scrollTop: $('.chat-room__main')[0].scrollHeight}, 'fast');
+        if (last_message_id != $(".chat-room__main__box__message").last().attr('data-message-id')) {
+          $('.chat-room__main').animate({scrollTop: $('.chat-room__main')[0].scrollHeight}, 'fast');
+        }
       })
       .fail(function() {
         alert('error');
